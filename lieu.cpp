@@ -4,7 +4,7 @@ using namespace std;
 
 struct Ville {
 	string nom;
-	Ville Voisins[] ;
+	Ville Voisins[] ; //does not compile
 };
 
 void init(Ville &v){
