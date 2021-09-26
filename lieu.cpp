@@ -16,21 +16,25 @@ void init(Ville &v){
 
 void print_connexions(Ville &v){
 	int i;
-	int n = v.nbVoisin;
+	int n = v.nbVoisin-1;
 	for (i =0; i<= n; i++){
-		cout << v.voisins[i];
+
+		cout << v.voisins[i]->nom;
 	}
 }
 
 
-int main(){ 
+int main(){
 	Ville* town1= new Ville();
 	town1->nom = "Madrid";
 	Ville* town2= new Ville();
 	town2->nom = "Lviv";
-	town2->voisins[0]= new Ville();
 	town2->voisins[0]= town1;
 	town2->nbVoisin=1; 
-	cout << town2->nbVoisin;
+	cout << town1->nom;
+	cout << "\n";
+	print_connexions(*town2);
+	cout << "\n";
+
     return 0;
 }
