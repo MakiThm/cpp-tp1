@@ -5,7 +5,7 @@ using namespace std;
 struct Ville {
 	string nom;
 	int nbVoisin;
-	struct Ville* voisins[4] ;
+	struct Ville* voisins[400] ;
 };
 
 void init(Ville &v){
